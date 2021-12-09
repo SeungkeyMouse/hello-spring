@@ -19,6 +19,7 @@ public class helloController {
         model.addAttribute("name", name);
         return "hello-template";
     }
+
     //API실습
     @GetMapping("hello-string")
     @ResponseBody//이게 붙어있으면! viewResolver한테 안던지고 HTTPMessageController한테 그냥 바로 넘김
@@ -33,8 +34,10 @@ public class helloController {
         hello.setName(name);
         return hello;//{"name":"api"} key:value 로 표현(JSON방식)
     }
-    static class Hello{//객체 단위로 전달하는용 생성했음!!3
+
+    static class Hello{//객체 단위로 전달하는용 생성했음!!getter/setter "ctrl+N"
         private String name;
+        //"프로퍼티 접근 방식"
         public String getName() {
             return name;
         }
