@@ -33,7 +33,7 @@ public class helloController {
         hello.setName(name);
         return hello;//{"name":"api"} key:value 로 표현(JSON방식)
     }
-    static class Hello{//객체 단위로 전달하는용 생성함
+    static class Hello{//객체 단위로 전달하는용 생성했음!!
         private String name;
         public String getName() {
             return name;
