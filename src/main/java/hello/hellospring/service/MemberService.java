@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+
 public class MemberService {//ctrl + shift + t 누르면 테스트 만들어짐
 
     private final MemberRepository memberRepository;
