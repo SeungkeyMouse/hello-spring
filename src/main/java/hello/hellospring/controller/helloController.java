@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class helloController {
+
     @GetMapping("hello")
     public String hello(Model model){
         model.addAttribute("data", "hello!!!");
