@@ -1,7 +1,6 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
-import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
@@ -19,8 +18,8 @@ public class MemoryMemberRepository implements MemberRepository{
     }
 
     @Override
-    public Optional<Member> findById(Long Id) {
-        return Optional.ofNullable(store.get(Id));//null이 반환될수있으면 Optional로 감싸서 함.
+    public Optional<Member> findById(Long id) {
+        return Optional.ofNullable(store.get(id));//null이 반환될수있으면 Optional로 감싸서 함.
     }
 
     @Override
