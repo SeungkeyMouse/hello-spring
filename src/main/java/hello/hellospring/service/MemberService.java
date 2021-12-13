@@ -20,11 +20,11 @@ public class MemberService {//ctrl + shift + t 누르면 테스트 만들어짐
      * 회원 가입
      */
     public Long join(Member member) {
-        //같은 이름이 있는 중복 회원 검증
-        validateDuplicateMember(member);//shift + ctrl + alt + T 메서드 추출
+            //같은 이름이 있는 중복 회원 검증
+            validateDuplicateMember(member);//shift + ctrl + alt + T 메서드 추출
 
-        memberRepository.save(member);
-        return member.getId();
+            memberRepository.save(member);
+            return member.getId();
     }
 
     private void validateDuplicateMember(Member member) {//shift + ctrl + alt + T 메서드 추출
@@ -38,8 +38,9 @@ public class MemberService {//ctrl + shift + t 누르면 테스트 만들어짐
      * 전체 회원 조회
      */
     public List<Member> findMembers() {
-        return memberRepository.findAll();
+            return memberRepository.findAll();
     }
+
     public Optional<Member> findOne(Long memberId) {
         return memberRepository.findById(memberId);
     }
